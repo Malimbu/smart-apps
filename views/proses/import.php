@@ -16,12 +16,12 @@ $listBulan=[1=>'Januari', 2=>'Februari', 3=>'Maret', 4=>'April', 5=>'Mei', 6=>'J
 
 	    <div class="panel panel-default">
 	        <div class="panel-heading">
-	            Menu
+	            <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> Menu
 	        </div>
 	        <div class="panel-body">
 				<ul class="nav nav-pills nav-stacked">
-				    <li role="presentation"><?= Html::a('Upload', ['upload']) ?></li>
-				    <li role="presentation" class="active"><?= Html::a('Proses', ['proses']) ?></li>
+				    <li role="presentation"><?= Html::a('Upload <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>', ['upload']) ?></li>
+				    <li role="presentation" class="active"><?= Html::a('Proses <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>', ['proses']) ?></li>
 				</ul>
 	        </div>
 	    </div>
@@ -33,14 +33,14 @@ $listBulan=[1=>'Januari', 2=>'Februari', 3=>'Maret', 4=>'April', 5=>'Mei', 6=>'J
 
 	    <div class="panel panel-default">
 	        <div class="panel-heading">
-	            Form Proses Data
+	            <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> Form Proses Data
 	        </div>
 	        <div class="panel-body">
 				<?php $form = ActiveForm::begin(); ?>
 
 		      	<?= $form->field($model, 'bulan')->dropDownList($listBulan) ?>
 
-			    <?= Html::submitButton('Proses', ['class' => 'btn btn-primary']) ?>    
+			    <?= Html::submitButton('<span class="glyphicon glyphicon-check" aria-hidden="true"></span> Proses', ['class' => 'btn btn-primary']) ?>    
 
 				<?php ActiveForm::end(); ?>	
 	        </div>

@@ -13,12 +13,12 @@ $this->params['breadcrumbs'][] = $this->title . ' Excel';
 
 	    <div class="panel panel-default">
 	        <div class="panel-heading">
-	            Menu
+	            <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> Menu
 	        </div>
 	        <div class="panel-body">
 				<ul class="nav nav-pills nav-stacked">
-				    <li role="presentation" class="active"><?= Html::a('Upload', ['upload']) ?></li>
-				    <li role="presentation"><?= Html::a('Proses', ['proses']) ?></li>
+				    <li role="presentation" class="active"><?= Html::a('Upload <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>', ['upload']) ?></li>
+				    <li role="presentation"><?= Html::a('Proses <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>', ['proses']) ?></li>
 				</ul>
 	        </div>
 	    </div>
@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title . ' Excel';
 
 	    <div class="panel panel-default">
 	        <div class="panel-heading">
-	            Form Upload
+	            <span class="glyphicon glyphicon-upload" aria-hidden="true"></span> Form Upload
 	        </div>
 	        <div class="panel-body">
 				<?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]) ?>

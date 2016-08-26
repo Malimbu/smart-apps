@@ -1,5 +1,5 @@
 <?php
-
+use yii\helpers\Html;
 /* @var $this yii\web\View */
 
 $this->title = 'My Yii Application';
@@ -8,10 +8,12 @@ $this->title = 'My Yii Application';
 
     <div class="jumbotron">
         <h1>Smart Apps</h1>
+        <p class="lead">Aplikasi Absensi Berbasis Web.</p>
+        <div class="row">        	
+        <?= Html::img('@web/images/img1.jpg') ?>
+        <?= Html::img('@web/images/img2.png') ?>
+        </div>
 
-        <p class="lead">Sistem Informasi Aplikasi Absensi Berbasis Web.</p>
-
-        <p><a class="btn btn-lg btn-success" href="#">Get started with Apps</a></p>
     </div>
 
     <div class="body-content">

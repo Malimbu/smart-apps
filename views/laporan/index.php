@@ -28,7 +28,7 @@ $listBulan=[1=>'Januari', 2=>'Februari', 3=>'Maret', 4=>'April', 5=>'Mei', 6=>'J
 
         <div class="panel panel-default">
             <div class="panel-heading">
-                Form Absensi
+                <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> Form Absensi
             </div>
             <div class="panel-body">
                 <?php $form = ActiveForm::begin(); ?>
@@ -36,7 +36,7 @@ $listBulan=[1=>'Januari', 2=>'Februari', 3=>'Maret', 4=>'April', 5=>'Mei', 6=>'J
                 <?= $form->field($model, 'bulan')->dropDownList($listBulan) ?>
                 <?= $form->field($model, 'id_pegawai')->dropDownList($listPegawai)->label('Nama Pegawai') ?>
 
-                <?= Html::submitButton('Proses', ['class' => 'btn btn-primary']) ?>
+                <?= Html::submitButton('<span class="glyphicon glyphicon-search" aria-hidden="true"></span> Proses', ['class' => 'btn btn-primary']) ?>
 
                 <?php ActiveForm::end(); ?>
 
@@ -50,7 +50,8 @@ $listBulan=[1=>'Januari', 2=>'Februari', 3=>'Maret', 4=>'April', 5=>'Mei', 6=>'J
         <?php if($model->flag=='yes') : ?>
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Laporan Absensi
+                    <span class="glyphicon glyphicon-book" aria-hidden="true"></span> Laporan Absensi
+                    <span class="pull-right"><?= Html::a('<span class="glyphicon glyphicon-download" aria-hidden="true"></span> Download Excel', ['export', 'bulan'=>$bulan, 'id_pegawai'=>$id_pegawai], ['class'=>'btn btn-primary btn-xs']) ?></span>
                 </div>
                 <div class="panel-body">
                     <table class="table table-bordered table-striped">
