@@ -33,12 +33,13 @@ class Pegawai extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['id_sidikjari', 'nama'], 'required'],
             [['id_sidikjari'], 'integer'],
             [['nama', 'hp'], 'string', 'max' => 35],
             [['alamat'], 'string', 'max' => 85],
             [['kelamin'], 'string', 'max' => 1],
             [['nip'], 'string', 'max' => 45],
-            [['id_sidikjari'], 'unique'],
+            [['id_sidikjari', 'nama'], 'unique'],
         ];
     }
 

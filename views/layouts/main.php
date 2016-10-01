@@ -25,6 +25,26 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
+<?php
+
+    $flag=isset($this->params['flag']) ? $this->params['flag'] : '' ;
+
+if ( $flag == 'modal' ) {
+    \yii\bootstrap\Modal::begin([
+        'headerOptions' => ['id' => 'modalHeader'],
+        'id' => 'myModal',
+        'header' => '<h4 class="modal-title">...</h4>',
+        'clientOptions' => ['backdrop' => 'static', 'keyboard' => false]
+    ]);
+
+    echo '...';
+
+    \yii\bootstrap\Modal::end();
+
+}
+
+?>
+
 <div class="wrap">
     <?php
     NavBar::begin([
